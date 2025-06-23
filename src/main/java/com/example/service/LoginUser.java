@@ -36,4 +36,8 @@ public class LoginUser implements UserDetails {
 	public String getName() {
 		return this.user.getName();
 	}
+	
+	public Integer getId() {
+		return this.user.getId();
+	}
 }
