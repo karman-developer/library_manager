@@ -50,10 +50,10 @@ public class LibraryController {
 		return "redirect:/library";
 	}
 
-//	@PostMapping("/return")
-//	public String returnBook(@RequestParam Integer id, @AuthenticationPrincipal LoginUser loginUser) {
-//		Integer loginUserId = loginUser.getId();
-//		this.libraryService.returnBook(id, loginUserId);
-//	}	return "redirect:/library";
-	
+	@PostMapping("/return")
+	public String returnBook(@RequestParam Integer id, @AuthenticationPrincipal LoginUser loginUser) {
+		Integer loginUserId = loginUser.getId();
+		this.libraryService.returnBook(id, loginUserId);
+		return "redirect:/library";
+	}
 }
