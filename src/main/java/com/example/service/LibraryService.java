@@ -86,4 +86,8 @@ public class LibraryService {
 			});
 		}
 	}
+
+	public List<Log> history(Integer loginUserId) {
+		return logRepository.findByUserId(loginUserId);
+	}
 }
